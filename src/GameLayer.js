@@ -1,8 +1,9 @@
 var GameLayer = cc.LayerColor.extend({
   init: function() {
-    this._super( new cc.Color( 127, 127, 127, 255 ) );
-    this.initWithFile( 'res/images/bg.PNG' );
-    this.setPosition( new cc.Point( 0, 0 ) );
+//    this._super( new cc.Color( 127, 127, 127, 255 ) );
+    this.bg = new bg();
+    this.addChild( this.bg );
+    this.setPosition( new cc.Point(400, 300 ) );
     
     return true;
   }
