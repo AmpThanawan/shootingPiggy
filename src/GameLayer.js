@@ -9,12 +9,16 @@ var GameLayer = cc.LayerColor.extend({
     this.addChild( this.gun );
     this.gun.setPosition( new cc.Point( 400, 10 ) );
     
-     this.pig = new pig();
+    this.pig = new pig();
     this.pig.setPosition( new cc.Point( 250, 800 ) );
     this.addChild( this.pig );
     this.pig.scheduleUpdate();
       
-   
+    this.pig2 = new pig();
+    this.pig2.setPosition( new cc.Point( 400, 800 ) );
+    this.addChild( this.pig2 );
+    this.pig2.scheduleUpdate();
+      
       
       
     this.addKeyboardHandlers();
