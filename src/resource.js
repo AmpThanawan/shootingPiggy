@@ -1,7 +1,8 @@
 var res = {
     bg: "res/images/bg.png",
     gun: "res/images/gun.png",
-    pig: "res/images/pig.png"
+    pig: "res/images/pig.png",
+    bullet: "res/images/bullet.png",
     
     
 };
