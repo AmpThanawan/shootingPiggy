@@ -35,6 +35,7 @@ var Gameover = cc.Sprite.extend({
 	},
 	onKeyDown: function (keyCode, event){
 		if (keyCode == 13){
+            cc.audioEngine.playEffect('res/effect/BIGLAFF.wav');
 			cc.director.runScene( new StartScene());
 		}
 

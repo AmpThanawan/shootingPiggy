@@ -1,7 +1,7 @@
 var StartScene = cc.Scene.extend({
     onEnter: function() {
         this._super();
-        
+        cc.audioEngine.playMusic( 'res/effect/gamemusic.wav',true );
         this.menuBg = new menu();
         this.addChild(this.menuBg);
         this.StartButton();
@@ -20,7 +20,7 @@ var StartScene = cc.Scene.extend({
                                           
     },
     PressStart : function(){
-            
+         cc.audioEngine.playEffect('res/effect/2CLICK.wav');   
         this.removeChild(this.menuBg);
         this.removeChild(this.StartPress);
         var layer = new GameLayer();

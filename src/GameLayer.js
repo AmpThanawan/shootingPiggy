@@ -3,7 +3,7 @@ var GameLayer = cc.LayerColor.extend({
             
         this.schedule( this.setTime,1 );
          this.times = 1000;
-         cc.audioEngine.playEffect('res/effect/CARNMUS.wav');               
+        cc.audioEngine.playMusic( 'res/effect/gamemusic.wav',true );               
 
         this.createTime();
         this.schedule( this.createPig, 2, 4, 1 ); 
@@ -159,13 +159,16 @@ var GameLayer = cc.LayerColor.extend({
     },
        onKeyDown: function( keyCode, event ) {
         	if ( keyCode == 37 ) {
+                cc.audioEngine.playEffect('res/effect/BIGLAFF.wav');
 	        this.Gun.left();
            
             }else if(keyCode == 39){
+                cc.audioEngine.playEffect('res/effect/BIGLAFF.wav');
              this.Gun.right();   
 
             }else if(keyCode == 32){
                 if(this.gameStatus == true){
+                    cc.audioEngine.playEffect('res/effect/BIGLAFF.wav');
                     this.createShootPlayer();
                 }
             }
