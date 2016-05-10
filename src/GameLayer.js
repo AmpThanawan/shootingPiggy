@@ -96,8 +96,8 @@ var GameLayer = cc.LayerColor.extend({
    
     createTime: function(){
        
-        this.timeLabel2 = cc.LabelTTF.create( this.times , "cooper std", 40 );
-        this.timeLabel2.setPosition( cc.p( 60, 550));
+        this.timeLabel2 = cc.LabelTTF.create( "Time left : "+this.times , "cooper std", 40 );
+        this.timeLabel2.setPosition( cc.p( 200, 550));
         this.timeLabel2.setColor( new cc.color(219,112,147));
         this.addChild(this.timeLabel2 , 1 );
     },
@@ -109,7 +109,7 @@ var GameLayer = cc.LayerColor.extend({
         }
         else if (this.times>0) {
             this.times-- ;
-            this.timeLabel2.setString( this.times );
+            this.timeLabel2.setString("Time left : "+this.times );
         }
          
         

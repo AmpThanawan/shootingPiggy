@@ -1,7 +1,13 @@
 var gameBg = cc.Sprite.extend({
     ctor: function(){
         this._super(); 
-        this.initWithFile( 'res/images/bg.png' );
+                var animation = new cc.Animation.create();
+        animation.addSpriteFrameWithFile( 'res/images/bg.png' );
+        animation.addSpriteFrameWithFile( 'res/images/bg2.png' );
+        animation.setDelayPerUnit( 0.2 );
+        var movingAction = cc.RepeatForever.create( cc.Animate.create( animation ) );
+        this.runAction( movingAction );
+        cc.director.setDisplayStats(false);
         this.setPosition(400,300);
     }
     
