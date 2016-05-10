@@ -3,7 +3,8 @@ var GameLayer = cc.LayerColor.extend({
             
         this.schedule( this.setTime,1 );
          this.times = 1000;
-        
+         cc.audioEngine.playEffect('res/effect/CARNMUS.wav');               
+
         this.createTime();
         this.schedule( this.createPig, 2, 4, 1 ); 
         this.createTextScore();
@@ -139,6 +140,7 @@ var GameLayer = cc.LayerColor.extend({
                         this.removeChild(this.allpigs[i]);
                         this.allpigs.splice(i,1);
                         score++;
+                        cc.audioEngine.playEffect('res/effect/KARATE.wav');
                         console.log(score);
                         check = false;
                         this.createPig();
@@ -190,6 +192,7 @@ var GameLayer = cc.LayerColor.extend({
          this.Gun.stopplayer();
         this.removeAllChildren();
         this.SumScore();
+        cc.audioEngine.playEffect('res/effect/BIGLAFF.wav');
         cc.director.runScene(new GameOverScreen());
         
            
